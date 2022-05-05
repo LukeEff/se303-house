@@ -28,6 +28,10 @@ class House
     end
   end
 
+  def changeme
+    (1..12).map { |number| line(number) }.join("\n")
+  end
+
   def recite
     <<-TEXT
 This is the house that Jack built.
