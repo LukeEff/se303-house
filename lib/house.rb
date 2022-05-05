@@ -28,7 +28,7 @@ class House
     end
   end
 
-  def horse(number = :fixme)
+  def horse(number)
     if number == 11
       ""
     else
