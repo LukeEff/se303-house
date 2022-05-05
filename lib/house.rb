@@ -26,6 +26,14 @@ class House
     end
   end
 
+  def farmer(number = :fixme)
+    if number == 10
+      ""
+    else
+      "the farmer sowing his corn that kept "
+    end
+  end
+
   def horse(number)
     if number == 11
       ""
