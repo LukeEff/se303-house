@@ -10,7 +10,7 @@ class House
     when 4
       "This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     else 
-      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
