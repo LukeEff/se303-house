@@ -1,11 +1,6 @@
 class House
   def line(number)
-    case number
-    when 1  
-      "This is the house that Jack built.\n"
-    else 
-      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}the house that Jack built.\n"
-    end
+    "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}the house that Jack built.\n"
   end
 
   def malt(number)
