@@ -18,6 +18,14 @@ class House
     end
   end
 
+  def maiden(number)
+    if number <= 6
+      ""
+    else
+      "the maiden all forlorn that milked "
+    end
+  end
+
   def man(number)
     if number <= 7
       ""
