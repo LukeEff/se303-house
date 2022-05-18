@@ -14,6 +14,14 @@ class House
     end
   end
 
+  def dog(number)
+    if number <= 4
+      ""
+    else
+      "the dog that worried "
+    end
+  end
+
   def cow(number)
     if number <= 5
       ""
