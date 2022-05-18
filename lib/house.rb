@@ -6,7 +6,7 @@ class House
     when 2
       "This is the malt that lay in the house that Jack built.\n"
     else 
-      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}the malt that lay in the house that Jack built.\n"
     end
   end
 
