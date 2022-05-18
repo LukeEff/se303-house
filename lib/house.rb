@@ -12,6 +12,14 @@ class House
     end
   end
 
+  def cat(number)
+    if number <= 3
+      ""
+    else
+      "the cat that killed "
+    end
+  end
+
   def dog(number)
     if number <= 4
       ""
