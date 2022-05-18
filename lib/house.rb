@@ -17,15 +17,21 @@ class House
       "This is the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     when 8
       "This is the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
-    when 9
-      "This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     else 
-      "This is #{horse(number)}#{farmer(number)}the rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+      "This is #{horse(number)}#{farmer(number)}#{rooster(number)}the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
     end
   end
 
-  def farmer(number = :fixme)
-    if number == 10
+  def rooster(number=:fixme)
+    if number <= 9
+      ""
+    else
+      "the rooster that crowed in the morn that woke "
+    end
+  end
+
+  def farmer(number)
+    if number <= 10
       ""
     else
       "the farmer sowing his corn that kept "
