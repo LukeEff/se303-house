@@ -20,6 +20,14 @@ class House
     end
   end
 
+  def man(number)
+    if number <= 7
+      ""
+    else
+      "the man all tattered and torn that kissed "
+    end
+  end
+
   def priest(number)
     if number <= 8
       ""
