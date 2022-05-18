@@ -1,6 +1,14 @@
 class House
   def line(number)
-    "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}the house that Jack built.\n"
+    "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}#{house(number)}.\n"
+  end
+
+  def house(number)
+    if number <= 0
+      ""
+    else
+      "the house that Jack built"
+    end
   end
 
   def malt(number)
