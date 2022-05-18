@@ -16,6 +16,14 @@ class House
     end
   end
 
+  def cow(number)
+    if number <= 5
+      ""
+    else
+      "the cow with the crumpled horn that tossed "
+    end
+  end
+
   def maiden(number)
     if number <= 6
       ""
