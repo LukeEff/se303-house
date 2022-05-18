@@ -1,6 +1,10 @@
 class House
   def line(number)
-    "This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}#{house(number)}.\n"
+    lines = [horse(number), farmer(number), rooster(number), priest(number), man(number), maiden(number), cow(number), dog(number), cat(number), rat(number), malt(number), house(number)]
+    phrase = "This is "
+    lines.each { |line| phrase << line }
+    phrase << ".\n"
+    #"This is #{horse(number)}#{farmer(number)}#{rooster(number)}#{priest(number)}#{man(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}#{house(number)}.\n"
   end
 
   def house(number)
