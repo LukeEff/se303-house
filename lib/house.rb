@@ -22,7 +22,15 @@ class House
     end
   end
 
-  def rooster(number=:fixme)
+  def priest(number)
+    if number <= 8
+      ""
+    else
+      "the priest all shaven and shorn that married " 
+    end
+  end
+
+  def rooster(number)
     if number <= 9
       ""
     else
