@@ -10,6 +10,14 @@ class House
     end
   end
 
+  def malt(number)
+    if number <= 1
+      ""
+    else
+      "the malt that lay in "
+    end
+  end
+
   def rat(number)
     if number <= 2
       ""
