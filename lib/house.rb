@@ -10,6 +10,14 @@ class House
     end
   end
 
+  def rat(number)
+    if number <= 2
+      ""
+    else
+      "the rat that ate "
+    end
+  end
+  
   def cat(number)
     if number <= 3
       ""
