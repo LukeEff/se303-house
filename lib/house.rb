@@ -54,6 +54,10 @@ class HouseComponent
     end.new(number)
   end
 
+  def successor
+    HouseComponent.for(number - 1)
+  end
+
 end
 
 class HouseComponent0 < HouseComponent
@@ -64,6 +68,10 @@ class HouseComponent0 < HouseComponent
 
   def action(number)
     "Jack built"
+  end
+
+  def successor
+    nil
   end
 
 end
