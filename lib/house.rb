@@ -3,7 +3,7 @@ class House
   def line(number)
     phrase = "This is "
     house_component = HouseComponent.for(number)
-    while (house_component = house_component.successor)
+    while (house_component = house_component.next)
       phrase << "the #{house_component.noun(nil)} that #{house_component.action(nil)}" 
     end
     phrase << ".\n"
@@ -54,7 +54,7 @@ class HouseComponent
     end.new(number)
   end
 
-  def successor
+  def next 
     HouseComponent.for(number - 1)
   end
 
@@ -70,7 +70,7 @@ class HouseComponent0 < HouseComponent
     "Jack built"
   end
 
-  def successor
+  def next 
     nil
   end
 
