@@ -26,18 +26,20 @@ class HouseComponent
   def self.for(number)
     if number == 0
       HouseComponent0
+    elsif number == 1
+      HouseComponent1
     else
       HouseComponent
     end.new(number)
   end
 
   def noun(number) 
-    nouns = [nil, "malt","rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
+    nouns = [nil, nil,"rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
     nouns[number]
   end
 
   def action(number)
-    actions = [nil, "lay in ", "ate ", "killed ", "worried ", "tossed ", "milked ", "kissed ", "married ", "woke ", "kept ", "belonged to "]
+    actions = [nil, nil, "ate ", "killed ", "worried ", "tossed ", "milked ", "kissed ", "married ", "woke ", "kept ", "belonged to "]
     actions[number]
   end
   
@@ -51,6 +53,18 @@ class HouseComponent0 < HouseComponent
 
   def action(number)
     "Jack built"
+  end
+
+end
+
+class HouseComponent1 < HouseComponent
+
+  def noun(number)
+    "malt"
+  end
+
+  def action(number)
+    "lay in "
   end
 
 end
