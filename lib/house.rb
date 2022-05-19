@@ -22,7 +22,7 @@ class House
   end
 end
 
-class HouseNumber
+class HouseComponent
 
   attr_reader :number
 
