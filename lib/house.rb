@@ -34,3 +34,11 @@ class HouseComponent
   end
   
 end
+
+class HouseComponent0 < HouseComponent
+
+  def noun(number)
+    "house"
+  end
+
+end
