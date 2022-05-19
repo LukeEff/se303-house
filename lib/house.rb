@@ -1,7 +1,7 @@
 class House
   
   def line(number)
-    house_component = HouseComponent.new(number)
+    house_component = HouseComponent.for(number)
     phrase = "This is "
     (number - 1).downto(0) do |i|
       phrase << "the #{house_component.noun(i)} that #{house_component.action(i)}"
@@ -23,7 +23,7 @@ class HouseComponent
     @number = number
   end
 
-  def for(number)
+  def self.for(number)
     if number == 0
       HouseComponent0
     else
