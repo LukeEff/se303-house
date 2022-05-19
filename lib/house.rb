@@ -24,9 +24,10 @@ class HouseComponent
   end
 
   def self.for(number)
-    if number == 0
+    case number
+    when 0
       HouseComponent0
-    elsif number == 1
+    when 1
       HouseComponent1
     else
       HouseComponent
