@@ -2,9 +2,9 @@ class House
   
   def line(number)
     phrase = "This is "
-    (number - 1).downto(0) do |i|
-      house_component = HouseComponent.for(i)
-      phrase << "the #{house_component.noun(i)} that #{house_component.action(i)}"
+    house_component = HouseComponent.for(number)
+    while (house_component = house_component.successor)
+      phrase << "the #{house_component.noun(nil)} that #{house_component.action(nil)}" 
     end
     phrase << ".\n"
   end
