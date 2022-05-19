@@ -1,14 +1,5 @@
 class House
   def line(number)
-    lines = [horse(number), farmer(number), rooster(number), priest(number), man(number), maiden(number), cow(number), dog(number), cat(number), rat(number), malt(number), house(number)]
-    phrase = "This is "
-    lines.each { |line| phrase << line }
-    phrase << ".\n"
-    templine(number)
-  end
-
-  def templine(number)
-    
     phrase = "This is "
     (number - 1).downto(0) do |i|
       phrase << "the #{noun(i)} that #{action(i)}"
@@ -17,7 +8,7 @@ class House
   end
 
   def noun(number) 
-    nouns = ["house","malt","rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn",  "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
+    nouns = ["house","malt","rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
     nouns[number]
   end
 
