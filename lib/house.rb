@@ -45,18 +45,20 @@ class HouseComponent
       HouseComponent8
     when 9
       HouseComponent9
+    when 10
+      HouseComponent10
     else
       HouseComponent
     end.new(number)
   end
 
   def noun(number) 
-    nouns = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "farmer sowing his corn", "horse and the hound and the horn"]
+    nouns = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "horse and the hound and the horn"]
     nouns[number]
   end
 
   def action(number)
-    actions = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "kept ", "belonged to "]
+    actions = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, "belonged to "]
     actions[number]
   end
   
@@ -178,6 +180,18 @@ class HouseComponent9 < HouseComponent
 
   def action(number)
     "woke "
+  end
+
+end
+
+class HouseComponent10 < HouseComponent
+
+  def noun(number)
+    "farmer sowing his corn"
+  end
+
+  def action(number)
+    "kept "
   end
 
 end
