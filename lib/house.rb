@@ -54,16 +54,6 @@ class HouseComponent
     end.new(number)
   end
 
-  def noun(number) 
-    nouns = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
-    nouns[number]
-  end
-
-  def action(number)
-    actions = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
-    actions[number]
-  end
-  
 end
 
 class HouseComponent0 < HouseComponent
