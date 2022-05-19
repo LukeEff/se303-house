@@ -4,16 +4,16 @@ class House
     phrase = "This is "
     lines.each { |line| phrase << line }
     phrase << ".\n"
+    templine(number)
   end
 
   def templine(number)
     
     phrase = "This is "
-
-    for i in 1..number do
-      phrase << "the #{noun(number)} that #{action(number)}"
+    (number - 1).downto(0) do |i|
+      phrase << "the #{noun(i)} that #{action(i)}"
     end
-
+    phrase << ".\n"
   end
 
   def noun(number) 
@@ -23,6 +23,7 @@ class House
 
   def action(number)
     actions = ["Jack built", "lay in ", "ate ", "killed ", "worried ", "tossed ", "milked ", "kissed ", "married ", "woke ", "kept ", "belonged to "]
+    actions[number]
   end
 
   def house(number)
