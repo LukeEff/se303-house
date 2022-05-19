@@ -1,9 +1,9 @@
 class House
   
   def line(number)
-    house_component = HouseComponent.for(number)
     phrase = "This is "
     (number - 1).downto(0) do |i|
+      house_component = HouseComponent.for(i)
       phrase << "the #{house_component.noun(i)} that #{house_component.action(i)}"
     end
     phrase << ".\n"
@@ -32,7 +32,7 @@ class HouseComponent
   end
 
   def noun(number) 
-    nouns = ["house","malt","rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
+    nouns = [nil , "malt","rat","cat","dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
     nouns[number]
   end
 
