@@ -2,10 +2,10 @@ class House
   
   def line(number)
     house_component = HouseComponent.for(number)
-    
+
     phrase = "This is "
     while (house_component = house_component.next)
-      phrase << "the #{house_component.noun(nil)} that #{house_component.action(nil)}" 
+      phrase << "the #{house_component.noun} that #{house_component.action}" 
     end
     phrase << ".\n"
   end
@@ -63,11 +63,11 @@ end
 
 class HouseComponent0 < HouseComponent
 
-  def noun(number)
+  def noun
     "house"
   end
 
-  def action(number)
+  def action
     "Jack built"
   end
 
@@ -79,11 +79,11 @@ end
 
 class HouseComponent1 < HouseComponent
 
-  def noun(number)
+  def noun
     "malt"
   end
 
-  def action(number)
+  def action
     "lay in "
   end
 
@@ -91,11 +91,11 @@ end
 
 class HouseComponent2 < HouseComponent
 
-  def noun(number)
+  def noun
     "rat"
   end
 
-  def action(number)
+  def action
     "ate "
   end
 
@@ -103,11 +103,11 @@ end
 
 class HouseComponent3 < HouseComponent
 
-  def noun(number)
+  def noun
     "cat"
   end
 
-  def action(number)
+  def action
     "killed "
   end
 
@@ -115,11 +115,11 @@ end
 
 class HouseComponent4 < HouseComponent
 
-  def noun(number)
+  def noun
     "dog"
   end
 
-  def action(number)
+  def action
     "worried "
   end
 
@@ -127,11 +127,11 @@ end
 
 class HouseComponent5 < HouseComponent
 
-  def noun(number)
+  def noun
     "cow with the crumpled horn"
   end
 
-  def action(number)
+  def action
     "tossed "
   end
 
@@ -139,11 +139,11 @@ end
 
 class HouseComponent6 < HouseComponent
 
-  def noun(number)
+  def noun
     "maiden all forlorn"
   end
 
-  def action(number)
+  def action
     "milked "
   end
 
@@ -151,11 +151,11 @@ end
 
 class HouseComponent7 < HouseComponent
 
-  def noun(number)
+  def noun
     "man all tattered and torn"
   end
 
-  def action(number)
+  def action
     "kissed "
   end
 
@@ -163,11 +163,11 @@ end
 
 class HouseComponent8 < HouseComponent
 
-  def noun(number)
+  def noun
     "priest all shaven and shorn"
   end
 
-  def action(number)
+  def action
     "married "
   end
 
@@ -175,11 +175,11 @@ end
 
 class HouseComponent9 < HouseComponent
 
-  def noun(number)
+  def noun
     "rooster that crowed in the morn"
   end
 
-  def action(number)
+  def action
     "woke "
   end
 
@@ -187,11 +187,11 @@ end
 
 class HouseComponent10 < HouseComponent
 
-  def noun(number)
+  def noun
     "farmer sowing his corn"
   end
 
-  def action(number)
+  def action
     "kept "
   end
 
@@ -199,11 +199,11 @@ end
 
 class HouseComponent11 < HouseComponent
 
-  def noun(number)
+  def noun
     "horse and the hound and the horn"
   end
 
-  def action(number)
+  def action
     "belonged to "
   end
 
