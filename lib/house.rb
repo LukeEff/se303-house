@@ -25,34 +25,20 @@ class HouseComponent
   end
 
   def self.for(number)
-    case number
-    when 0
-      HouseComponent0
-    when 1
-      HouseComponent1
-    when 2
-      HouseComponent2
-    when 3
-      HouseComponent3
-    when 4
-      HouseComponent4
-    when 5
-      HouseComponent5
-    when 6
-      HouseComponent6
-    when 7
-      HouseComponent7
-    when 8
-      HouseComponent8
-    when 9
-      HouseComponent9
-    when 10
-      HouseComponent10
-    when 11
-      HouseComponent11
-    else
-      HouseComponent
-    end.new(number)
+    Hash.new(HouseComponent).merge(
+      0 => HouseComponent0,
+      1 => HouseComponent1,
+      2 => HouseComponent2,
+      3 => HouseComponent3,
+      4 => HouseComponent4,
+      5 => HouseComponent5,
+      6 => HouseComponent6,
+      7 => HouseComponent7,
+      8 => HouseComponent8,
+      9 => HouseComponent9,
+      10 => HouseComponent10,
+      11 => HouseComponent11,
+    )[number].new(number)
   end
 
   def next 
