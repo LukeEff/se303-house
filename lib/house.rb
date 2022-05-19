@@ -1,8 +1,9 @@
 class House
   def line(number)
+    house_component = HouseComponent.new(number)
     phrase = "This is "
     (number - 1).downto(0) do |i|
-      phrase << "the #{noun(i)} that #{action(i)}"
+      phrase << "the #{house_component.noun(i)} that #{house_component.action(i)}"
     end
     phrase << ".\n"
   end
