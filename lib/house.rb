@@ -33,18 +33,20 @@ class HouseComponent
       HouseComponent2
     when 3
       HouseComponent3
+    when 4
+      HouseComponent4
     else
       HouseComponent
     end.new(number)
   end
 
   def noun(number) 
-    nouns = [nil, nil, nil, nil,"dog", "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
+    nouns = [nil, nil, nil, nil, nil, "cow with the crumpled horn", "maiden all forlorn", "man all tattered and torn", "priest all shaven and shorn", "rooster that crowed in the morn", "farmer sowing his corn", "horse and the hound and the horn"]
     nouns[number]
   end
 
   def action(number)
-    actions = [nil, nil, nil, nil, "worried ", "tossed ", "milked ", "kissed ", "married ", "woke ", "kept ", "belonged to "]
+    actions = [nil, nil, nil, nil, nil, "tossed ", "milked ", "kissed ", "married ", "woke ", "kept ", "belonged to "]
     actions[number]
   end
   
@@ -94,6 +96,18 @@ class HouseComponent3 < HouseComponent
 
   def action(number)
     "killed "
+  end
+
+end
+
+class HouseComponent4 < HouseComponent
+
+  def noun(number)
+    "dog"
+  end
+
+  def action(number)
+    "worried "
   end
 
 end
