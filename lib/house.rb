@@ -1,9 +1,13 @@
 class House
+
+  def initialize(start_phrase="This is")
+    @start_phrase = start_phrase
+  end
   
   def line(number)
     house_component = HouseComponent.for(number)
 
-    phrase = "This is "
+    phrase = "#{@start_phrase} "
     while (house_component = house_component.next)
       phrase << "the #{house_component.noun} that #{house_component.action}" 
     end
