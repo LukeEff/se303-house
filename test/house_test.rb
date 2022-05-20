@@ -14,6 +14,11 @@ class HouseTest < Minitest::Test
     expected = "Thar be the malt that lay in the house that Jack built.\n"
     assert_equal expected, House.new("Thar be").line(2)
   end
+
+  def test_pirate_version_line_3
+    expected = "Thar be the rat that ate the malt that lay in the house that Jack built.\n"
+    assert_equal expected, House.new("Thar be").line(3)
+  end
     
   def test_line_1
     expected = "This is the house that Jack built.\n"
