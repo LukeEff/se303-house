@@ -50,6 +50,10 @@ class HouseComponent
     (registry[number] || HouseComponent).new(number)
   end
 
+  def self.shuffle
+    registry[1..registry.length].shuffle
+  end
+
   def next 
     HouseComponent.for(number - 1)
   end
