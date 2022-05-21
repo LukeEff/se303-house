@@ -42,13 +42,12 @@ class HouseComponent
       HouseComponent8,
       HouseComponent9,
       HouseComponent10,
-      HouseComponent11,
-      HouseComponent
+      HouseComponent11
     ]
   end
 
   def self.for(number)
-    registry[number].new(number)
+    (registry[number] || HouseComponent).new(number)
   end
 
   def next 
