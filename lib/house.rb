@@ -30,7 +30,6 @@ class HouseComponent
 
   def self.registry
     @registry ||= unshuffle 
-    
   end
 
   def self.for(number)
