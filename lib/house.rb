@@ -28,21 +28,27 @@ class HouseComponent
     @number = number
   end
 
+  def self.registry
+    @registry ||= 
+    [
+      HouseComponent0, 
+      HouseComponent1,
+      HouseComponent2,
+      HouseComponent3,
+      HouseComponent4,
+      HouseComponent5,
+      HouseComponent6,
+      HouseComponent7,
+      HouseComponent8,
+      HouseComponent9,
+      HouseComponent10,
+      HouseComponent11,
+      HouseComponent
+    ]
+  end
+
   def self.for(number)
-    Hash.new(HouseComponent).merge(
-      0 => HouseComponent0,
-      1 => HouseComponent1,
-      2 => HouseComponent2,
-      3 => HouseComponent3,
-      4 => HouseComponent4,
-      5 => HouseComponent5,
-      6 => HouseComponent6,
-      7 => HouseComponent7,
-      8 => HouseComponent8,
-      9 => HouseComponent9,
-      10 => HouseComponent10,
-      11 => HouseComponent11,
-    )[number].new(number)
+    registry[number].new(number)
   end
 
   def next 
