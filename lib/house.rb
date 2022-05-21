@@ -29,8 +29,16 @@ class HouseComponent
   end
 
   def self.registry
-    @registry ||= 
-    [
+    @registry ||= unshuffle 
+    
+  end
+
+  def self.for(number)
+    (registry[number] || HouseComponent).new(number)
+  end
+
+  def self.unshuffle
+    @registry = [
       HouseComponent0, 
       HouseComponent1,
       HouseComponent2,
@@ -46,12 +54,8 @@ class HouseComponent
     ]
   end
 
-  def self.for(number)
-    (registry[number] || HouseComponent).new(number)
-  end
-
-  def self.shuffle
-    registry[1..registry.length].shuffle
+  def self.shuffle(seed=Random.new)
+    registry.shuffle!(random: seed)
   end
 
   def next 

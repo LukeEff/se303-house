@@ -114,4 +114,21 @@ This is the horse and the hound and the horn that belonged to the farmer sowing 
     assert_equal expected, House.new.recite
   end
 
+  def test_random_repeated_line_3
+    HouseComponent.shuffle(Random.new(5))
+    expect = "This is the rat that ate the cow with the crumpled horn that tossed the man all tattered and torn that kissed the cat that killed the maiden all forlorn that milked the farmer sowing his corn that kept the house that Jack built.\n"
+    actual = House.new().line(3)
+    HouseComponent.unshuffle
+    assert_equal expect, actual 
+  end
+
+  def test_random_lines_repeat
+    HouseComponent.shuffle(Random.new(5))
+    expect = House.new().line(3)
+    actual = House.new().line(3)
+    HouseComponent.unshuffle
+    assert_equal expect, actual
+  end
+
+
 end
