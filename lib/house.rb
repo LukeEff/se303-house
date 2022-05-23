@@ -23,8 +23,7 @@ class House
 
     phrase = "#{@start_phrase} "
     while (house_component = house_component.next)
-      action_component = house_action.pop
-      phrase << "the #{house_component.noun} that #{action_component.new(nil).action}" 
+      phrase << "the #{house_component.noun} that #{house_action.pop.new(nil).action}" 
     end
     phrase << ".\n"
   end
