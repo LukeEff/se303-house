@@ -31,6 +31,13 @@ class HouseTest < Minitest::Test
     HouseComponent.unshuffle
     assert_equal expected, actual
   end
+
+  def test_mix_line_3
+    expected = "This is the rooster that crowed in the morn that killed the rat that woke the maiden all forlorn that milked the house that Jack built.\n"
+    actual = House.new.line_mix(3, Random.new(5))
+    HouseComponent.unshuffle
+    assert_equal expected, actual
+  end
     
   def test_line_1
     expected = "This is the house that Jack built.\n"
