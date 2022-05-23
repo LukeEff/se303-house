@@ -14,10 +14,6 @@ class House
     phrase << ".\n"
   end
 
-  def recite_mix()
-    (1..12).map { |number| line(number) }.join("\n")
-  end
-
   def line_mix(number, seed=Random.new)
     house_action = HouseComponent.registry.drop(1).shuffle(random: seed)[0...number]
     house_action.unshift(HouseComponent0)
