@@ -14,6 +14,25 @@ class House
     phrase << ".\n"
   end
 
+  def recite_mix()
+    (1..12).map { |number| line(number) }.join("\n")
+  end
+
+  def line_mix(number, seed=Random.new)
+    house_action = HouseComponent.registry.drop(1).shuffle(random: seed)[0...number]
+    house_action.unshift(HouseComponent0)
+
+    HouseComponent.shuffle(seed)
+    house_component = HouseComponent.for(number)
+
+    phrase = "#{@start_phrase} "
+    while (house_component = house_component.next)
+      action_component = house_action.pop
+      phrase << "the #{house_component.noun} that #{action_component.new(nil).action}" 
+    end
+    phrase << ".\n"
+  end
+
   def recite
     (1..12).map { |number| line(number) }.join("\n")
   end
